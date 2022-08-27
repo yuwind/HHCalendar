@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A2DC383C2C0974B5A9744D /* Pods_HHCalendarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7185ADFCBF53943A2EB0FCC4 /* Pods_HHCalendarDemo.framework */; };
+		FE3CC37B28B5F59700608BF1 /* HHCalendarBaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3CC37A28B5F59700608BF1 /* HHCalendarBaseConfig.m */; };
+		FE3CC37E28B622D800608BF1 /* HHCalendarBaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3CC37D28B622D800608BF1 /* HHCalendarBaseCellModel.m */; };
+		FE58BB3B28B4A02500D6AA2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB3A28B4A02500D6AA2B /* AppDelegate.m */; };
+		FE58BB4128B4A02500D6AA2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB4028B4A02500D6AA2B /* ViewController.m */; };
+		FE58BB4428B4A02500D6AA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE58BB4228B4A02500D6AA2B /* Main.storyboard */; };
+		FE58BB4628B4A02600D6AA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE58BB4528B4A02600D6AA2B /* Assets.xcassets */; };
+		FE58BB4928B4A02600D6AA2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE58BB4728B4A02600D6AA2B /* LaunchScreen.storyboard */; };
+		FE58BB4C28B4A02600D6AA2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB4B28B4A02600D6AA2B /* main.m */; };
+		FE58BB5828B4A0B400D6AA2B /* HHCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB5628B4A0B400D6AA2B /* HHCalendarView.m */; };
+		FE58BB5B28B4A24500D6AA2B /* HHCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB5A28B4A24500D6AA2B /* HHCalendarWeekView.m */; };
+		FE58BB5E28B4A3F600D6AA2B /* HHCalendarWeekConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB5D28B4A3F600D6AA2B /* HHCalendarWeekConfig.m */; };
+		FE58BB6128B4A76C00D6AA2B /* HHCalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB6028B4A76C00D6AA2B /* HHCalendarContentView.m */; };
+		FE58BB6428B4A7EB00D6AA2B /* HHCalendarContentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB6328B4A7EB00D6AA2B /* HHCalendarContentConfig.m */; };
+		FE58BB6728B4A9C200D6AA2B /* HHCalendarDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB6628B4A9C200D6AA2B /* HHCalendarDataProvider.m */; };
+		FE58BB6A28B4B05500D6AA2B /* HHCalendarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB6928B4B05500D6AA2B /* HHCalendarConfig.m */; };
+		FE58BB7F28B4DAA200D6AA2B /* HHCalendarBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58BB7E28B4DAA200D6AA2B /* HHCalendarBaseCell.m */; };
+		FE5E6AC028B8CEF2000351F0 /* HHCalendarBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FE5E6ABF28B8CEF2000351F0 /* HHCalendarBundle.bundle */; };
+		FE8687A228B63C6400232C51 /* HHCalendarCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8687A128B63C6400232C51 /* HHCalendarCustomCell.m */; };
+		FE8687A528B63C7800232C51 /* HHCalendarCustomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8687A428B63C7800232C51 /* HHCalendarCustomCellModel.m */; };
+		FE8687A828B70E5400232C51 /* HHCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8687A728B70E5400232C51 /* HHCalendarHeaderView.m */; };
+		FE8687AB28B7272200232C51 /* HHCalendarHeaderConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8687AA28B7272200232C51 /* HHCalendarHeaderConfig.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7185ADFCBF53943A2EB0FCC4 /* Pods_HHCalendarDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HHCalendarDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75140736885C5CEA40CF5A7D /* Pods-HHCalendarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHCalendarDemo.release.xcconfig"; path = "Target Support Files/Pods-HHCalendarDemo/Pods-HHCalendarDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C83B54544DAF8DAE95D54D11 /* Pods-HHCalendarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHCalendarDemo.debug.xcconfig"; path = "Target Support Files/Pods-HHCalendarDemo/Pods-HHCalendarDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FE3CC37928B5F59700608BF1 /* HHCalendarBaseConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarBaseConfig.h; sourceTree = "<group>"; };
+		FE3CC37A28B5F59700608BF1 /* HHCalendarBaseConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarBaseConfig.m; sourceTree = "<group>"; };
+		FE3CC37C28B622D800608BF1 /* HHCalendarBaseCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarBaseCellModel.h; sourceTree = "<group>"; };
+		FE3CC37D28B622D800608BF1 /* HHCalendarBaseCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarBaseCellModel.m; sourceTree = "<group>"; };
+		FE58BB3628B4A02500D6AA2B /* HHCalendarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHCalendarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE58BB3928B4A02500D6AA2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE58BB3A28B4A02500D6AA2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE58BB3F28B4A02500D6AA2B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FE58BB4028B4A02500D6AA2B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FE58BB4328B4A02500D6AA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE58BB4528B4A02600D6AA2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE58BB4828B4A02600D6AA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE58BB4A28B4A02600D6AA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE58BB4B28B4A02600D6AA2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE58BB5628B4A0B400D6AA2B /* HHCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCalendarView.m; sourceTree = "<group>"; };
+		FE58BB5728B4A0B400D6AA2B /* HHCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCalendarView.h; sourceTree = "<group>"; };
+		FE58BB5928B4A24500D6AA2B /* HHCalendarWeekView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarWeekView.h; sourceTree = "<group>"; };
+		FE58BB5A28B4A24500D6AA2B /* HHCalendarWeekView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarWeekView.m; sourceTree = "<group>"; };
+		FE58BB5C28B4A3F600D6AA2B /* HHCalendarWeekConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarWeekConfig.h; sourceTree = "<group>"; };
+		FE58BB5D28B4A3F600D6AA2B /* HHCalendarWeekConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarWeekConfig.m; sourceTree = "<group>"; };
+		FE58BB5F28B4A76C00D6AA2B /* HHCalendarContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarContentView.h; sourceTree = "<group>"; };
+		FE58BB6028B4A76C00D6AA2B /* HHCalendarContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarContentView.m; sourceTree = "<group>"; };
+		FE58BB6228B4A7EB00D6AA2B /* HHCalendarContentConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarContentConfig.h; sourceTree = "<group>"; };
+		FE58BB6328B4A7EB00D6AA2B /* HHCalendarContentConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarContentConfig.m; sourceTree = "<group>"; };
+		FE58BB6528B4A9C200D6AA2B /* HHCalendarDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarDataProvider.h; sourceTree = "<group>"; };
+		FE58BB6628B4A9C200D6AA2B /* HHCalendarDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarDataProvider.m; sourceTree = "<group>"; };
+		FE58BB6828B4B05500D6AA2B /* HHCalendarConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarConfig.h; sourceTree = "<group>"; };
+		FE58BB6928B4B05500D6AA2B /* HHCalendarConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarConfig.m; sourceTree = "<group>"; };
+		FE58BB7D28B4DAA200D6AA2B /* HHCalendarBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarBaseCell.h; sourceTree = "<group>"; };
+		FE58BB7E28B4DAA200D6AA2B /* HHCalendarBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarBaseCell.m; sourceTree = "<group>"; };
+		FE5E6ABF28B8CEF2000351F0 /* HHCalendarBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HHCalendarBundle.bundle; sourceTree = "<group>"; };
+		FE8687A028B63C6400232C51 /* HHCalendarCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarCustomCell.h; sourceTree = "<group>"; };
+		FE8687A128B63C6400232C51 /* HHCalendarCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarCustomCell.m; sourceTree = "<group>"; };
+		FE8687A328B63C7800232C51 /* HHCalendarCustomCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarCustomCellModel.h; sourceTree = "<group>"; };
+		FE8687A428B63C7800232C51 /* HHCalendarCustomCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarCustomCellModel.m; sourceTree = "<group>"; };
+		FE8687A628B70E5400232C51 /* HHCalendarHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarHeaderView.h; sourceTree = "<group>"; };
+		FE8687A728B70E5400232C51 /* HHCalendarHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarHeaderView.m; sourceTree = "<group>"; };
+		FE8687A928B7272200232C51 /* HHCalendarHeaderConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarHeaderConfig.h; sourceTree = "<group>"; };
+		FE8687AA28B7272200232C51 /* HHCalendarHeaderConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarHeaderConfig.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE58BB3328B4A02500D6AA2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A2DC383C2C0974B5A9744D /* Pods_HHCalendarDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B0B5FD01CE8E2A1494D70E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C83B54544DAF8DAE95D54D11 /* Pods-HHCalendarDemo.debug.xcconfig */,
+				75140736885C5CEA40CF5A7D /* Pods-HHCalendarDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B63884ED625CE6B4F114D4C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7185ADFCBF53943A2EB0FCC4 /* Pods_HHCalendarDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE58BB2D28B4A02500D6AA2B = {
+			isa = PBXGroup;
+			children = (
+				FE58BB3828B4A02500D6AA2B /* HHCalendarDemo */,
+				FE58BB3728B4A02500D6AA2B /* Products */,
+				5B0B5FD01CE8E2A1494D70E8 /* Pods */,
+				B63884ED625CE6B4F114D4C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE58BB3728B4A02500D6AA2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE58BB3628B4A02500D6AA2B /* HHCalendarDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE58BB3828B4A02500D6AA2B /* HHCalendarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FE58BB5528B4A0B400D6AA2B /* HHCalendar */,
+				FE58BB3928B4A02500D6AA2B /* AppDelegate.h */,
+				FE58BB3A28B4A02500D6AA2B /* AppDelegate.m */,
+				FE58BB3F28B4A02500D6AA2B /* ViewController.h */,
+				FE58BB4028B4A02500D6AA2B /* ViewController.m */,
+				FE8687A328B63C7800232C51 /* HHCalendarCustomCellModel.h */,
+				FE8687A428B63C7800232C51 /* HHCalendarCustomCellModel.m */,
+				FE8687A028B63C6400232C51 /* HHCalendarCustomCell.h */,
+				FE8687A128B63C6400232C51 /* HHCalendarCustomCell.m */,
+				FE58BB4228B4A02500D6AA2B /* Main.storyboard */,
+				FE58BB4528B4A02600D6AA2B /* Assets.xcassets */,
+				FE58BB4728B4A02600D6AA2B /* LaunchScreen.storyboard */,
+				FE58BB4A28B4A02600D6AA2B /* Info.plist */,
+				FE58BB4B28B4A02600D6AA2B /* main.m */,
+			);
+			path = HHCalendarDemo;
+			sourceTree = "<group>";
+		};
+		FE58BB5528B4A0B400D6AA2B /* HHCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				FE58BB5728B4A0B400D6AA2B /* HHCalendarView.h */,
+				FE58BB5628B4A0B400D6AA2B /* HHCalendarView.m */,
+				FE58BB6828B4B05500D6AA2B /* HHCalendarConfig.h */,
+				FE58BB6928B4B05500D6AA2B /* HHCalendarConfig.m */,
+				FE3CC37928B5F59700608BF1 /* HHCalendarBaseConfig.h */,
+				FE3CC37A28B5F59700608BF1 /* HHCalendarBaseConfig.m */,
+				FE8687A628B70E5400232C51 /* HHCalendarHeaderView.h */,
+				FE8687A728B70E5400232C51 /* HHCalendarHeaderView.m */,
+				FE8687A928B7272200232C51 /* HHCalendarHeaderConfig.h */,
+				FE8687AA28B7272200232C51 /* HHCalendarHeaderConfig.m */,
+				FE58BB5928B4A24500D6AA2B /* HHCalendarWeekView.h */,
+				FE58BB5A28B4A24500D6AA2B /* HHCalendarWeekView.m */,
+				FE58BB5C28B4A3F600D6AA2B /* HHCalendarWeekConfig.h */,
+				FE58BB5D28B4A3F600D6AA2B /* HHCalendarWeekConfig.m */,
+				FE58BB5F28B4A76C00D6AA2B /* HHCalendarContentView.h */,
+				FE58BB6028B4A76C00D6AA2B /* HHCalendarContentView.m */,
+				FE58BB6228B4A7EB00D6AA2B /* HHCalendarContentConfig.h */,
+				FE58BB6328B4A7EB00D6AA2B /* HHCalendarContentConfig.m */,
+				FE58BB6528B4A9C200D6AA2B /* HHCalendarDataProvider.h */,
+				FE58BB6628B4A9C200D6AA2B /* HHCalendarDataProvider.m */,
+				FE3CC37C28B622D800608BF1 /* HHCalendarBaseCellModel.h */,
+				FE3CC37D28B622D800608BF1 /* HHCalendarBaseCellModel.m */,
+				FE58BB7D28B4DAA200D6AA2B /* HHCalendarBaseCell.h */,
+				FE58BB7E28B4DAA200D6AA2B /* HHCalendarBaseCell.m */,
+				FE5E6ABF28B8CEF2000351F0 /* HHCalendarBundle.bundle */,
+			);
+			path = HHCalendar;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE58BB3528B4A02500D6AA2B /* HHCalendarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE58BB4F28B4A02600D6AA2B /* Build configuration list for PBXNativeTarget "HHCalendarDemo" */;
+			buildPhases = (
+				EB846A519AED4BD75A45CBDB /* [CP] Check Pods Manifest.lock */,
+				FE58BB3228B4A02500D6AA2B /* Sources */,
+				FE58BB3328B4A02500D6AA2B /* Frameworks */,
+				FE58BB3428B4A02500D6AA2B /* Resources */,
+				148293493D63EDCF59A740F2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHCalendarDemo;
+			productName = HHCalendarDemo;
+			productReference = FE58BB3628B4A02500D6AA2B /* HHCalendarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE58BB2E28B4A02500D6AA2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					FE58BB3528B4A02500D6AA2B = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = FE58BB3128B4A02500D6AA2B /* Build configuration list for PBXProject "HHCalendarDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE58BB2D28B4A02500D6AA2B;
+			productRefGroup = FE58BB3728B4A02500D6AA2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE58BB3528B4A02500D6AA2B /* HHCalendarDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE58BB3428B4A02500D6AA2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE58BB4928B4A02600D6AA2B /* LaunchScreen.storyboard in Resources */,
+				FE58BB4628B4A02600D6AA2B /* Assets.xcassets in Resources */,
+				FE5E6AC028B8CEF2000351F0 /* HHCalendarBundle.bundle in Resources */,
+				FE58BB4428B4A02500D6AA2B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		148293493D63EDCF59A740F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HHCalendarDemo/Pods-HHCalendarDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HHCalendarDemo/Pods-HHCalendarDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HHCalendarDemo/Pods-HHCalendarDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB846A519AED4BD75A45CBDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HHCalendarDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE58BB3228B4A02500D6AA2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE58BB5828B4A0B400D6AA2B /* HHCalendarView.m in Sources */,
+				FE58BB4128B4A02500D6AA2B /* ViewController.m in Sources */,
+				FE8687AB28B7272200232C51 /* HHCalendarHeaderConfig.m in Sources */,
+				FE8687A528B63C7800232C51 /* HHCalendarCustomCellModel.m in Sources */,
+				FE3CC37E28B622D800608BF1 /* HHCalendarBaseCellModel.m in Sources */,
+				FE58BB3B28B4A02500D6AA2B /* AppDelegate.m in Sources */,
+				FE58BB5E28B4A3F600D6AA2B /* HHCalendarWeekConfig.m in Sources */,
+				FE58BB6728B4A9C200D6AA2B /* HHCalendarDataProvider.m in Sources */,
+				FE58BB6128B4A76C00D6AA2B /* HHCalendarContentView.m in Sources */,
+				FE58BB5B28B4A24500D6AA2B /* HHCalendarWeekView.m in Sources */,
+				FE58BB4C28B4A02600D6AA2B /* main.m in Sources */,
+				FE8687A228B63C6400232C51 /* HHCalendarCustomCell.m in Sources */,
+				FE3CC37B28B5F59700608BF1 /* HHCalendarBaseConfig.m in Sources */,
+				FE58BB6428B4A7EB00D6AA2B /* HHCalendarContentConfig.m in Sources */,
+				FE58BB7F28B4DAA200D6AA2B /* HHCalendarBaseCell.m in Sources */,
+				FE58BB6A28B4B05500D6AA2B /* HHCalendarConfig.m in Sources */,
+				FE8687A828B70E5400232C51 /* HHCalendarHeaderView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE58BB4228B4A02500D6AA2B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE58BB4328B4A02500D6AA2B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE58BB4728B4A02600D6AA2B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE58BB4828B4A02600D6AA2B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE58BB4D28B4A02600D6AA2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE58BB4E28B4A02600D6AA2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE58BB5028B4A02600D6AA2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C83B54544DAF8DAE95D54D11 /* Pods-HHCalendarDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8ADM337BP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HHCalendarDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drojian.huxuewei.HHCalendarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FE58BB5128B4A02600D6AA2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75140736885C5CEA40CF5A7D /* Pods-HHCalendarDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8ADM337BP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HHCalendarDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drojian.huxuewei.HHCalendarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE58BB3128B4A02500D6AA2B /* Build configuration list for PBXProject "HHCalendarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE58BB4D28B4A02600D6AA2B /* Debug */,
+				FE58BB4E28B4A02600D6AA2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE58BB4F28B4A02600D6AA2B /* Build configuration list for PBXNativeTarget "HHCalendarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE58BB5028B4A02600D6AA2B /* Debug */,
+				FE58BB5128B4A02600D6AA2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE58BB2E28B4A02500D6AA2B /* Project object */;
+}
