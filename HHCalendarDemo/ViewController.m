@@ -6,8 +6,8 @@
 //
 
 #import "ViewController.h"
-#import "HHCalendarView.h"
 #import <HHCommon/HHCommon.h>
+#import "HHCalendar.h"
 #import "HHCalendarCustomCellModel.h"
 #import "HHCalendarCustomCell.h"
 
@@ -52,6 +52,8 @@
         config.contentConfig.cellModelClass = HHCalendarCustomCellModel.class;
         config.contentConfig.cellClassArray = @[HHCalendarCustomCell.class];
         config.headerConfig.shouldShowNextMonthAfterToday = NO;
+        config.shouldShowHeaderView = YES;
+        config.shouldShowWeekView = YES;
     }];
     [self.view addSubview:customCalendar];
     customCalendar.top_.equalTo( self.defaultCalendar.bott_).offset_(20).on_();

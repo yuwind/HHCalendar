@@ -46,6 +46,7 @@
 - (void)setupSubviews {
     self.headerView = [[HHCalendarHeaderView alloc] initWithFrame:CGRectZero config:self.config.headerConfig];
     [self addSubview:self.headerView];
+    self.headerView.layer.masksToBounds = YES;
     @weakly(self);
     self.headerView.previousBlock = ^{
         @strongly(self);
@@ -59,6 +60,7 @@
     
     self.weekView = [[HHCalendarWeekView alloc] initWithFrame:CGRectZero config:self.config.weekConfig];
     [self addSubview:self.weekView];
+    self.weekView.layer.masksToBounds = YES;
     
     self.contentView = [[HHCalendarContentView alloc] initWithFrame:CGRectZero config:self.config.contentConfig dataProvider:self.dataProvider];
     [self addSubview:self.contentView];
@@ -76,14 +78,25 @@
 
 - (void)setupConstraints {
     self.headerView.left_.top_.righ_.equalTo(self).on_();
-    self.headerView.heit_.offset_(self.config.headerHeight).on_();
-    
-    self.weekView.top_.equalTo(self.headerView.bott_).offset_(self.config.headerWeekViewMargin).on_();
+    if (self.config.shouldShowHeaderView) {
+        self.headerView.heit_.offset_(self.config.headerHeight).on_();
+        self.weekView.top_.equalTo(self.headerView.bott_).offset_(self.config.headerWeekViewMargin).on_();
+    } else {
+        self.headerView.heit_.offset_(0).on_();
+        self.weekView.top_.equalTo(0).on_();
+    }
+
     self.weekView.left_.righ_.equalTo(self).on_();
     self.weekView.heit_.offset_(self.config.weekViewHeight).on_();
+    if (self.config.shouldShowWeekView) {
+        self.weekView.heit_.offset_(self.config.weekViewHeight).on_();
+        self.contentView.top_.equalTo(self.weekView.bott_).offset_(self.config.weekContentViewMargin).on_();
+    } else {
+        self.weekView.heit_.offset_(0).on_();
+        self.contentView.top_.equalTo(self.weekView.bott_).offset_(0).on_();
+    }
     
     CGSize contentSize = [self.contentView contentViewSize];
-    self.contentView.top_.equalTo(self.weekView.bott_).offset_(self.config.weekContentViewMargin).on_();
     self.contentView.left_.righ_.centX_.equalTo(self).on_();
     self.contentView.bott_.equalTo(self).on_();
     self.contentView.size_.offsets_(@(contentSize.width),@(contentSize.height),nil).on_();
@@ -91,6 +104,16 @@
 
 - (void)bindingBlockInfo {
     @weakly(self);
+    self.config.binding(@selector(setShouldShowHeaderView:), ^{
+        @strongly(self);
+        if (self.config.shouldShowHeaderView) {
+            self.headerView.heit_.offset_(self.config.headerHeight).on_();
+            self.weekView.top_.equalTo(self.headerView.bott_).offset_(self.config.headerWeekViewMargin).on_();
+        } else {
+            self.headerView.heit_.offset_(0).on_();
+            self.weekView.top_.equalTo(self.headerView.bott_).offset_(0).on_();
+        }
+    });
     self.config.binding(@selector(setHeaderHeight:), ^{
         @strongly(self);
         self.headerView.heit_.offset_(self.config.headerHeight).on_();
@@ -98,6 +121,16 @@
     self.config.binding(@selector(setHeaderWeekViewMargin:), ^{
         @strongly(self);
         self.weekView.top_.equalTo(self.headerView.bott_).offset_(self.config.headerWeekViewMargin).on_();
+    });
+    self.config.binding(@selector(setShouldShowWeekView:), ^{
+        @strongly(self);
+        if (self.config.shouldShowWeekView) {
+            self.weekView.heit_.offset_(self.config.weekViewHeight).on_();
+            self.contentView.top_.equalTo(self.weekView.bott_).offset_(self.config.weekContentViewMargin).on_();
+        } else {
+            self.weekView.heit_.offset_(0).on_();
+            self.contentView.top_.equalTo(self.weekView.bott_).offset_(0).on_();
+        }
     });
     self.config.binding(@selector(setWeekViewHeight:), ^{
         @strongly(self);

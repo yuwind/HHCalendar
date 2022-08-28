@@ -16,12 +16,19 @@
         _headerConfig = [HHCalendarHeaderConfig new];
         _weekConfig = [HHCalendarWeekConfig new];
         _contentConfig = [HHCalendarContentConfig new];
+        _shouldShowHeaderView = YES;
         _headerHeight = ceil(mAdapter(44));
         _headerWeekViewMargin = ceil(mAdapter(8));
+        _shouldShowWeekView = YES;
         _weekViewHeight = ceil(mAdapter(20));
         _weekContentViewMargin = ceil(mAdapter(8));
     }
     return self;
+}
+
+- (void)setShouldShowHeaderView:(BOOL)shouldShowHeaderView {
+    _shouldShowHeaderView = shouldShowHeaderView;
+    [self triggerBindingBlockIfNeeded:_cmd];
 }
 
 - (void)setHeaderHeight:(CGFloat)headerHeight {
@@ -31,6 +38,11 @@
 
 - (void)setHeaderWeekViewMargin:(CGFloat)headerWeekViewMargin {
     _headerWeekViewMargin = headerWeekViewMargin;
+    [self triggerBindingBlockIfNeeded:_cmd];
+}
+
+- (void)setShouldShowWeekView:(BOOL)shouldShowWeekView {
+    _shouldShowWeekView = shouldShowWeekView;
     [self triggerBindingBlockIfNeeded:_cmd];
 }
 

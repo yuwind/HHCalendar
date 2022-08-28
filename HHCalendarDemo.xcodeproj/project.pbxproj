@@ -66,6 +66,7 @@
 		FE58BB7D28B4DAA200D6AA2B /* HHCalendarBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarBaseCell.h; sourceTree = "<group>"; };
 		FE58BB7E28B4DAA200D6AA2B /* HHCalendarBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarBaseCell.m; sourceTree = "<group>"; };
 		FE5E6ABF28B8CEF2000351F0 /* HHCalendarBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HHCalendarBundle.bundle; sourceTree = "<group>"; };
+		FE5E6AC128BAFF9F000351F0 /* HHCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCalendar.h; sourceTree = "<group>"; };
 		FE8687A028B63C6400232C51 /* HHCalendarCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarCustomCell.h; sourceTree = "<group>"; };
 		FE8687A128B63C6400232C51 /* HHCalendarCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCalendarCustomCell.m; sourceTree = "<group>"; };
 		FE8687A328B63C7800232C51 /* HHCalendarCustomCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCalendarCustomCellModel.h; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		FE58BB5528B4A0B400D6AA2B /* HHCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				FE5E6AC128BAFF9F000351F0 /* HHCalendar.h */,
 				FE58BB5728B4A0B400D6AA2B /* HHCalendarView.h */,
 				FE58BB5628B4A0B400D6AA2B /* HHCalendarView.m */,
 				FE58BB6828B4B05500D6AA2B /* HHCalendarConfig.h */,

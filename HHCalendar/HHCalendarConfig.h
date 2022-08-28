@@ -17,8 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) HHCalendarHeaderConfig *headerConfig;
 @property (nonatomic, strong) HHCalendarWeekConfig *weekConfig;
 @property (nonatomic, strong) HHCalendarContentConfig *contentConfig;
+@property (nonatomic, assign) BOOL shouldShowHeaderView;//default YES
 @property (nonatomic, assign) CGFloat headerHeight;//default 40;
 @property (nonatomic, assign) CGFloat headerWeekViewMargin;//default 8
+@property (nonatomic, assign) BOOL shouldShowWeekView;//default YES
 @property (nonatomic, assign) CGFloat weekViewHeight;//default 20
 @property (nonatomic, assign) CGFloat weekContentViewMargin;//default 8
 
