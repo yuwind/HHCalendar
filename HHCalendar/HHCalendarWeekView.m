@@ -32,10 +32,11 @@
     NSMutableArray *arrayM = @[].mutableCopy;
     for (int i = 0; i < titleArray.count; i++) {
         UILabel *label = [UILabel new];
+        label.font = self.config.textFont;
         label.textColor = self.config.textColor;
         label.textAlignment = self.config.textAlignment;
-        label.font = self.config.textFont;
         label.text = [titleArray hh_objectSafelyAtIndex:i];
+        label.adjustsFontSizeToFitWidth = YES;
         [arrayM hh_addObjectSafely:label];
     }
     self.labelArray = arrayM.copy;
