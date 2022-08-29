@@ -62,7 +62,7 @@
     self.collectionView.backgroundColor = UIColor.clearColor;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    CGFloat margin = self.config.calendarWidth - (self.flowLayout.itemSize.width * 7 + 6 * self.config.columnSpacing);
+    CGFloat margin = floor(self.config.calendarWidth) - (self.flowLayout.itemSize.width * 7 + 6 * self.config.columnSpacing);
     self.collectionView.contentInset = UIEdgeInsetsMake(0, margin, 0, 0);
     [self.collectionView registerClass:[HHCalendarBaseCell class] forCellWithReuseIdentifier:NSStringFromClass([HHCalendarBaseCell class])];
     for (Class class in self.config.cellClassArray) {
@@ -90,7 +90,7 @@
 - (void)setupContraints {
     self.scrollView.around_();
     self.leftImageView.top_.left_.bott_.centY_.equalTo(self.scrollView).on_();
-    self.leftImageView.widt_.offset_(self.config.calendarWidth).on_();
+    self.leftImageView.widt_.offset_(floor(self.config.calendarWidth)).on_();
     
     self.collectionView.left_.equalTo(self.leftImageView.righ_).on_();
     self.collectionView.top_.bott_.centY_.widt_.equalTo(self.leftImageView).on_();
@@ -101,7 +101,7 @@
     [self setNeedsLayout];
     [self layoutIfNeeded];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.scrollView setContentOffset:CGPointMake(self.config.calendarWidth, 0) animated:NO];
+        [self.scrollView setContentOffset:CGPointMake(floor(self.config.calendarWidth), 0) animated:NO];
     });
 }
 
@@ -111,14 +111,14 @@
     }
     UIImage *image = [self snapShotWithView:self.collectionView];
     self.rightImageView.image = image;
-    [self.scrollView setContentOffset:CGPointMake(self.config.calendarWidth * 2, 0) animated:NO];
+    [self.scrollView setContentOffset:CGPointMake(floor(self.config.calendarWidth) * 2, 0) animated:NO];
 }
 
 - (void)afterPreviousAction {
     if (self.config.shouldShowChangeAnimation == NO) {
         return;
     }
-    [self.scrollView setContentOffset:CGPointMake(self.config.calendarWidth, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(floor(self.config.calendarWidth), 0) animated:YES];
 }
 
 - (void)beforeNextAction {
@@ -134,7 +134,7 @@
     if (self.config.shouldShowChangeAnimation == NO) {
         return;
     }
-    [self.scrollView setContentOffset:CGPointMake(self.config.calendarWidth, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(floor(self.config.calendarWidth), 0) animated:YES];
 }
 
 - (void)bindingBlockInfo {
@@ -162,7 +162,7 @@
 
 - (void)recreateFlowLayout {
     self.flowLayout = [self createFlowLayout];
-    CGFloat margin = self.config.calendarWidth - (self.flowLayout.itemSize.width * 7 + 6 * self.config.columnSpacing);
+    CGFloat margin = floor(self.config.calendarWidth) - (self.flowLayout.itemSize.width * 7 + 6 * self.config.columnSpacing);
     self.collectionView.contentInset = UIEdgeInsetsMake(0, margin, 0, 0);
     [self.collectionView setCollectionViewLayout:self.flowLayout animated:NO];
     if (self.styleChangedBlock) {
@@ -215,13 +215,13 @@
     CGFloat lineSpacing = self.config.lineSpacing;
     NSInteger rowCount = self.dataProvider.numberOfRows;
     CGFloat contentHeight = rowCount * (itemWidth + lineSpacing) - lineSpacing;
-    return CGSizeMake(self.config.calendarWidth, contentHeight);
+    return CGSizeMake(floor(self.config.calendarWidth), contentHeight);
 }
 
 - (UICollectionViewFlowLayout *)createFlowLayout {
     CGFloat columnSpacing = self.config.columnSpacing;
     CGFloat lineSpacing = self.config.lineSpacing;
-    CGFloat itemWidth = floor((self.config.calendarWidth - 6 * columnSpacing) / 7);
+    CGFloat itemWidth = floor((floor(self.config.calendarWidth) - 6 * columnSpacing) / 7);
     
     UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
     flowLayout.minimumLineSpacing = lineSpacing;
