@@ -50,6 +50,12 @@
         label.textColor = self.config.titleColor;
         label.font = self.config.titleFont;
         label.adjustsFontSizeToFitWidth = YES;
+        [label hh_addClickAction:^(UIView * _Nonnull sender) {
+            @strongly(self);
+            if (self.clickDateBlock) {
+                self.clickDateBlock(self.date);
+            }
+        }];
     }];
     
     [self hh_addButton:^(UIButton * _Nonnull button) {
@@ -65,7 +71,7 @@
     }];
 }
 
-- (void (^)(NSDate * _Nonnull))dateBlock {
+- (void (^)(NSDate * _Nonnull))setDateBlock {
     return ^(NSDate *date) {
         self.date = date;
         self.titleLabel.text = [date hh_stringWithDateFormat:self.config.dateFormat];
@@ -104,7 +110,9 @@
     });
     self.config.binding(@selector(setDateFormat:), ^{
         @strongly(self);
-        self.dateBlock(self.date);
+        if (self.setDateBlock) {
+            self.setDateBlock(self.date);
+        }
     });
     self.config.binding(@selector(setTitleColor:), ^{
         @strongly(self);

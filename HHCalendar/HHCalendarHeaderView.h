@@ -13,8 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HHCalendarHeaderView : UIView
 
 @property (nonatomic, copy) void(^previousBlock)(void);
+@property (nonatomic, copy) void(^clickDateBlock)(NSDate *date);
 @property (nonatomic, copy) void(^nextBlock)(void);
-@property (nonatomic, copy, readonly) void(^dateBlock)(NSDate *date);
+@property (nonatomic, copy, readonly) void(^setDateBlock)(NSDate *date);
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;

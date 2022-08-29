@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) HHCalendarConfig *config;
 @property (nonatomic, strong, readonly) HHCalendarDataProvider *dataProvider;
 @property (nonatomic, copy) void(^didSelectItemBlock)(HHCalendarBaseCell *cell);
+@property (nonatomic, copy) void(^didClickHeaderDateBlock)(NSDate *date);
 
 + (instancetype)createCalendarView:(void(^ _Nullable)(HHCalendarConfig * config))configBlock;
 

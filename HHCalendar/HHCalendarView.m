@@ -56,7 +56,11 @@
         @strongly(self);
         [self nextAction];
     };
-    self.headerView.dateBlock(self.dataProvider.triggerDate);
+    self.headerView.clickDateBlock = ^(NSDate * _Nonnull date) {
+        @strongly(self);
+        [self clickHeaderDateActionWithDate:date];
+    };
+    self.headerView.setDateBlock(self.dataProvider.triggerDate);
     
     self.weekView = [[HHCalendarWeekView alloc] initWithFrame:CGRectZero config:self.config.weekConfig];
     [self addSubview:self.weekView];
@@ -154,7 +158,7 @@
     [self.contentView beforePreviousAction];
     [self.dataProvider previousAction];
     [self resizeContentView];
-    self.headerView.dateBlock(self.dataProvider.triggerDate);
+    self.headerView.setDateBlock(self.dataProvider.triggerDate);
     [self.contentView afterPreviousAction];
 }
 
@@ -162,14 +166,20 @@
     [self.contentView beforeNextAction];
     [self.dataProvider nextAction];
     [self resizeContentView];
-    self.headerView.dateBlock(self.dataProvider.triggerDate);
+    self.headerView.setDateBlock(self.dataProvider.triggerDate);
     [self.contentView afterNextAction];
+}
+
+- (void)clickHeaderDateActionWithDate:(NSDate *)date {
+    if (self.didClickHeaderDateBlock) {
+        self.didClickHeaderDateBlock(date);
+    }
 }
 
 - (void)backToToday {
     [self.dataProvider backToToday];
     [self resizeContentView];
-    self.headerView.dateBlock(self.dataProvider.triggerDate);
+    self.headerView.setDateBlock(self.dataProvider.triggerDate);
 }
 
 - (void)resizeContentView {
