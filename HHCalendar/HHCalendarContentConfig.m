@@ -20,6 +20,8 @@
         _lineSpacing = floor(mAdapter(8));
         _columnSpacing = floor(mAdapter(8));
         _shouldFixTriggerDate = YES;
+        _shouldShowPlaceholder = YES;
+        _shouldShowChangeAnimation = YES;
     }
     return self;
 }

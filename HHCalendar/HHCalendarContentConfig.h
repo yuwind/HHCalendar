@@ -22,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat calendarWidth;//default screen width - 60
 @property (nonatomic, assign) CGFloat lineSpacing;//default 8
 @property (nonatomic, assign) CGFloat columnSpacing;//default 8
-@property (nonatomic, assign) BOOL shouldShowPlaceholder;//default NO
-@property (nonatomic, assign) BOOL shouldShowChangeAnimation;//default NO
+@property (nonatomic, assign) BOOL shouldShowPlaceholder;//default YES
+@property (nonatomic, assign) BOOL shouldShowChangeAnimation;//default YES
 
 @property (nonatomic, copy, nullable) NSArray *cellClassArray;//default nil
 @property (nonatomic, strong, nullable) Class cellModelClass;//default nil
