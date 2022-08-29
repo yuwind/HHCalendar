@@ -30,9 +30,9 @@
 }
 
 - (void)setTriggerDate:(NSDate *)triggerDate {
-    _shouldFixTriggerDate = NO;
     _triggerDate = triggerDate;
     [self triggerBindingBlockIfNeeded:_cmd];
+    _shouldFixTriggerDate = [triggerDate hh_isSameDay:[NSDate date]];
 }
 
 - (NSDate *)triggerDate {

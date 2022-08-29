@@ -83,6 +83,12 @@
 }
 
 - (void)backToToday {
+    self.config.triggerDate = [NSDate date];
+    self.triggerDate = [NSDate date];
+    [self dateChangedAction];
+}
+
+- (void)backToTriggerDate {
     self.triggerDate = self.config.triggerDate;
     [self dateChangedAction];
 }

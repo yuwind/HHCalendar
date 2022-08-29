@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)previousAction;
 - (void)nextAction;
 - (void)backToToday;
+- (void)backToTriggerDate;
 
 - (BOOL)isCurrentMonthWithDate:(NSDate *)date;
 - (BOOL)isAfterTodayWithDate:(NSDate *)date;

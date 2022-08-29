@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)previousAction;
 - (void)nextAction;
 - (void)backToToday;
+- (void)backToTriggerDate;
 
 @end
 

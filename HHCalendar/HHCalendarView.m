@@ -187,6 +187,12 @@
     self.headerView.setDateBlock(self.dataProvider.triggerDate);
 }
 
+- (void)backToTriggerDate {
+    [self.dataProvider backToTriggerDate];
+    [self resizeContentView];
+    self.headerView.setDateBlock(self.dataProvider.triggerDate);
+}
+
 - (void)resizeContentView {
     self.contentView.heit_.offset_([self.contentView contentViewSize].height).on_();
     self.contentView.widt_.offset_([self.contentView contentViewSize].width).on_();
