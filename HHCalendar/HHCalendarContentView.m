@@ -71,11 +71,18 @@
         }
     }
     @weakly(self);
-    self.dataProvider.reloadUIBlock = ^{
+    self.dataProvider.dateChangedBlock = ^{
         @strongly(self);
         [self.collectionView reloadData];
-        if (self.styleChangedAction) {
-            self.styleChangedAction();
+        if (self.dateChangedBlock) {
+            self.dateChangedBlock();
+        }
+    };
+    self.dataProvider.styleChangedBlock = ^{
+        @strongly(self);
+        [self.collectionView reloadData];
+        if (self.styleChangedBlock) {
+            self.styleChangedBlock();
         }
     };
 }
@@ -158,8 +165,8 @@
     CGFloat margin = self.config.calendarWidth - (self.flowLayout.itemSize.width * 7 + 6 * self.config.columnSpacing);
     self.collectionView.contentInset = UIEdgeInsetsMake(0, margin, 0, 0);
     [self.collectionView setCollectionViewLayout:self.flowLayout animated:NO];
-    if (self.styleChangedAction) {
-        self.styleChangedAction();
+    if (self.styleChangedBlock) {
+        self.styleChangedBlock();
     }
 }
 

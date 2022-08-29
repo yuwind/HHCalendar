@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HHCalendarContentView : UIView
 
 @property (nonatomic, strong, readonly) HHCalendarContentConfig *config;
-@property (nonatomic, copy) void(^styleChangedAction)(void);
+@property (nonatomic, copy) void(^styleChangedBlock)(void);
+@property (nonatomic, copy) void(^dateChangedBlock)(void);
 @property (nonatomic, copy) void(^didSelectItemBlock)(HHCalendarBaseCell *cell);
 
 + (instancetype)new NS_UNAVAILABLE;

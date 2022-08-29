@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSInteger numberOfRows;
 @property (nonatomic, copy, readonly) NSDate *startDate;
 @property (nonatomic, copy, readonly) NSDate *triggerDate;
-@property (nonatomic, copy) void(^reloadUIBlock)(void);
+@property (nonatomic, copy) void(^styleChangedBlock)(void);
+@property (nonatomic, copy) void(^dateChangedBlock)(void);
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;

@@ -52,12 +52,15 @@
     @weakly(self);
     self.config.binding(@selector(setCalendarStyle:), ^{
         @strongly(self);
-        [self reloadDataAndUI];
+        [self calculateData];
+        if (self.styleChangedBlock) {
+            self.styleChangedBlock();
+        }
     });
     self.config.binding(@selector(setTriggerDate:), ^{
         @strongly(self);
         self.triggerDate = self.config.triggerDate;
-        [self reloadDataAndUI];
+        [self dateChangedAction];
     });
 }
 
@@ -67,7 +70,7 @@
     } else {
         self.triggerDate = [self.triggerDate hh_weekOffset:-1];
     }
-    [self reloadDataAndUI];
+    [self dateChangedAction];
 }
 
 - (void)nextAction {
@@ -76,18 +79,18 @@
     } else {
         self.triggerDate = [self.triggerDate hh_weekOffset:1];
     }
-    [self reloadDataAndUI];
+    [self dateChangedAction];
 }
 
 - (void)backToToday {
     self.triggerDate = self.config.triggerDate;
-    [self reloadDataAndUI];
+    [self dateChangedAction];
 }
 
-- (void)reloadDataAndUI {
+- (void)dateChangedAction {
     [self calculateData];
-    if (self.reloadUIBlock) {
-        self.reloadUIBlock();
+    if (self.dateChangedBlock) {
+        self.dateChangedBlock();
     }
 }
 

@@ -68,8 +68,13 @@
     
     self.contentView = [[HHCalendarContentView alloc] initWithFrame:CGRectZero config:self.config.contentConfig dataProvider:self.dataProvider];
     [self addSubview:self.contentView];
-    self.contentView.styleChangedAction = ^{
+    self.contentView.styleChangedBlock = ^{
         @strongly(self);
+        [self resizeContentView];
+    };
+    self.contentView.dateChangedBlock = ^{
+        @strongly(self);
+        self.headerView.setDateBlock(self.dataProvider.triggerDate);
         [self resizeContentView];
     };
     self.contentView.didSelectItemBlock = ^(HHCalendarBaseCell * _Nonnull cell) {
