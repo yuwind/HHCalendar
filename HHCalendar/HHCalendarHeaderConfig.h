@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *previousImageName;
 @property (nonatomic, copy) NSString *nextImageName;
-@property (nonatomic, copy) NSString *dateFormat;
-@property (nonatomic, strong) UIColor *titleColor;
-@property (nonatomic, strong) UIFont *titleFont;
+@property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIFont *textFont;
 @property (nonatomic, assign) BOOL shouldShowNextMonthAfterToday;//default YES
+@property (nonatomic, strong, nullable) NSDateFormatter *dateFormatter;
 
 @end
 

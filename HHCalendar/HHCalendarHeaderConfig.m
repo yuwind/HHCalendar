@@ -15,9 +15,8 @@
     if (self) {
         _previousImageName = @"hh_calendar_previous";
         _nextImageName = @"hh_calendar_next";
-        _dateFormat = @"MMM yyyy";
-        _titleColor = [UIColor darkTextColor];
-        _titleFont = mSystemBoldFont(18);
+        _textColor = [UIColor darkTextColor];
+        _textFont = mSystemBoldFont(18);
         _shouldShowNextMonthAfterToday = YES;
     }
     return self;
@@ -33,18 +32,18 @@
     [self triggerBindingBlockIfNeeded:_cmd];
 }
 
-- (void)setDateFormat:(NSString *)dateFormat {
-    _dateFormat = dateFormat;
+- (void)setTextColor:(UIColor *)textColor {
+    _textColor = textColor;
     [self triggerBindingBlockIfNeeded:_cmd];
 }
 
-- (void)setTitleColor:(UIColor *)titleColor {
-    _titleColor = titleColor;
+- (void)setTextFont:(UIFont *)textFont {
+    _textFont = textFont;
     [self triggerBindingBlockIfNeeded:_cmd];
 }
 
-- (void)setTitleFont:(UIFont *)titleFont {
-    _titleFont = titleFont;
+- (void)setDateFormatter:(NSDateFormatter *)dateFormatter {
+    _dateFormatter = dateFormatter;
     [self triggerBindingBlockIfNeeded:_cmd];
 }
 

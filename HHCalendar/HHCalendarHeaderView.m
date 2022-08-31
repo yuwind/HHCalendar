@@ -47,8 +47,8 @@
     [self hh_addLabel:^(UILabel * _Nonnull label) {
         self.titleLabel = label;
         label.textAlignment = NSTextAlignmentCenter;
-        label.textColor = self.config.titleColor;
-        label.font = self.config.titleFont;
+        label.textColor = self.config.textColor;
+        label.font = self.config.textFont;
         label.adjustsFontSizeToFitWidth = YES;
         [label hh_addClickAction:^(UIView * _Nonnull sender) {
             @strongly(self);
@@ -74,7 +74,11 @@
 - (void (^)(NSDate * _Nonnull))setDateBlock {
     return ^(NSDate *date) {
         self.date = date;
-        self.titleLabel.text = [date hh_stringWithDateFormat:self.config.dateFormat];
+        if (self.config.dateFormatter != nil) {
+            self.titleLabel.text = [self.config.dateFormatter stringFromDate:date];
+        } else {
+            self.titleLabel.text = [date hh_stringWithDateFormat:@"MMM yyyy"];
+        }
         if (self.config.shouldShowNextMonthAfterToday == NO) {
             NSDate *current = [NSDate date];
             NSInteger currentMonth = current.hh_month;
@@ -108,19 +112,19 @@
         @strongly(self);
         [self.nextButton setImage:self.config.nextImageName.toImage forState:UIControlStateNormal];
     });
-    self.config.binding(@selector(setDateFormat:), ^{
+    self.config.binding(@selector(setDateFormatter:), ^{
         @strongly(self);
         if (self.setDateBlock) {
             self.setDateBlock(self.date);
         }
     });
-    self.config.binding(@selector(setTitleColor:), ^{
+    self.config.binding(@selector(setTextColor:), ^{
         @strongly(self);
-        self.titleLabel.textColor = self.config.titleColor;
+        self.titleLabel.textColor = self.config.textColor;
     });
-    self.config.binding(@selector(setTitleFont:), ^{
+    self.config.binding(@selector(setTextFont:), ^{
         @strongly(self);
-        self.titleLabel.font = self.config.titleFont;
+        self.titleLabel.font = self.config.textFont;
     });
 }
 

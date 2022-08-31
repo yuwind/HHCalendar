@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'HHCalendar' 
-  s.version      = '1.0.0'
+  s.version      = '1.0.1'
   s.summary      = 'HHCalendar'
   s.description  = 'ui common method'
   s.homepage     = 'https://github.com/yuwind/HHCalendar/wiki'
