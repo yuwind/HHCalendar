@@ -100,6 +100,10 @@
     }
 }
 
+- (void)reloadData {
+    [self dateChangedAction];
+}
+
 - (BOOL)isCurrentMonthWithDate:(NSDate *)date {
     NSInteger triggerMonth = [self.triggerDate hh_month];
     NSInteger dateMonth = [date hh_month];

@@ -193,6 +193,10 @@
     self.headerView.setDateBlock(self.dataProvider.triggerDate);
 }
 
+- (void)reloadData {
+    [self.dataProvider reloadData];
+}
+
 - (void)resizeContentView {
     self.contentView.heit_.offset_([self.contentView contentViewSize].height).on_();
     self.contentView.widt_.offset_([self.contentView contentViewSize].width).on_();
