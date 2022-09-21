@@ -2,6 +2,6 @@
 
 ```objc
 target 'MyApp' do
-  pod 'HHCalendar', '~> 1.0.0'
+  pod 'HHCalendar', '~> 1.0.1'
 end
 ```
